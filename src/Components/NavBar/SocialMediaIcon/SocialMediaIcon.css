@@ -1,0 +1,31 @@
+/* Add space for login and signup links */
+.navbar-nav .nav-item {
+  margin: 0 1rem;
+}
+
+/* Social media icons in navbar */
+.social-media {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push social media icons to the left */
+}
+
+.social-media .nav-item {
+  margin: 0 0.5rem;
+}
+
+/* Social media icon links */
+.social-media .nav-item a {
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.social-media .nav-item a:hover {
+  color: hwb(56 4% 12%);
+}
+/* Responsive adjustments for social media icons */
+@media (max-width: 768px) {
+  .social-media {
+    margin: 0.5rem 0;
+  }
+}

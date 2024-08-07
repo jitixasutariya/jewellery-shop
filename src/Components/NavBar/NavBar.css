@@ -1,0 +1,93 @@
+/* Reset and box-sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Adjust logo size */
+.navbar-logo {
+  max-height: 120px; /* Adjusted for better responsiveness */
+  border-radius: 70px;
+}
+
+/* Center the toggler on smaller screens */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Custom link styles */
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  font-size: 1.2rem; /* Adjusted for responsiveness */
+  padding: 0.5rem 1rem; /* Adjusted for better spacing */
+  position: relative;
+  text-decoration: none;
+}
+
+/* Link hover styles */
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: hwb(56 4% 12%);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover,
+.nav-link.active {
+  color: hwb(56 4% 12%);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 0.9rem; /* Adjusted for better spacing */
+    padding: 0.1rem 0.6rem; /* Adjusted for better spacing */
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    font-size: 0.9rem;
+    margin: 3rem;
+  }
+}
+
+/* Hide the logo on the smallest screens */
+@media (max-width: 576px) {
+  .navbar-logo {
+    width: 70%;
+  }
+}
